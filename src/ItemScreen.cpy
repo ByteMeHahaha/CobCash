@@ -4,8 +4,8 @@
 
            05 BLANK SCREEN.
 
-           05 LINE 2 COL 3 VALUE "Items (Min. 1 item)".
-           05 LINE 3 COL 3 VALUE "-------------------".
+           05 LINE 2 COL 3 VALUE "Items (Item 1 Required)".
+           05 LINE 3 COL 3 VALUE "-----------------------".
 
            05 LINE 5 COL 3 VALUE "Item".
            05 LINE 5 COL PLUS 31 VALUE "Price".
