@@ -107,7 +107,7 @@
        COPY "ItemScreen.cpy".
 
        PROCEDURE DIVISION.
-       INITIALISATION SECTION. *> Initialise all the data in this app
+       VariableInitialisation. *> Initialise all the data in this app
       *Initialise data items without a VALUE clause
            INITIALISE WS-Card-Data.
            INITIALISE WS-Date.
@@ -123,7 +123,7 @@
            MOVE FUNCTION CURRENT-DATE(1:8)
                TO WS-Date.
 
-       USER-INPUT SECTION. *> Show the user input screens
+       AcceptUserInput. *> Show the user input screens
       *    Open the Receipt.txt file and start recording values
       *    for its report.
            OPEN OUTPUT Receipt-File.
@@ -134,7 +134,7 @@
            ACCEPT SC-Item-Screen.
 
            PERFORM VARYING I FROM 1 BY 1 UNTIL I EQUALS 5
-               COMPUTE 
+               COMPUTE
                    WS-Owed = WS-Owed + WS-Prices(I) * WS-Quantities(I)
                END-COMPUTE
            END-PERFORM.
@@ -143,7 +143,7 @@
            DISPLAY SC-Payment-Screen.
            ACCEPT SC-Payment-Screen.
 
-       Processing-User-Input SECTION. *> Process user input
+       Process-User-Input. *> Process user input
       *    Display the processing screen
            DISPLAY SC-Processing-Screen.
 
@@ -179,7 +179,7 @@
       *    Allows the user to actually see the processing screen
            CONTINUE AFTER 2 SECONDS.
 
-       END-OF-PROGRAM SECTION. *> Close loose ends in the program
+       FinishProgram. *> Close loose ends in the program
       *    Generate the report and terminate it
            GENERATE Receipt-Report.
            TERMINATE Receipt-Report.

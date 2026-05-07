@@ -20,6 +20,7 @@
            05 LINE 7 COLUMN PLUS 1 PIC 9(5) USING WS-PIN
               REVERSE-VIDEO
               REQUIRED
+              AUTO-SKIP
               SECURE. *> Mask input with asterisks
 
       *    Divider line
@@ -35,5 +36,5 @@
 
            05 LINE 14 COL 3 VALUE "Amount Paid: ".
            05 LINE 14 COL PLUS 1 PIC $ZZZZZ9.99 USING WS-Paid
-              REVERSE-VIDEO 
+              REVERSE-VIDEO
               REQUIRED.

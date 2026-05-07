@@ -36,8 +36,8 @@ then generates a receipt in the form of a text file (`Receipt.txt`).
 ### About This Project
 
 - All COBOL source code intentionally follows _**fixed format**_, as this is
-  what I prefer and am used to using for COBOL programming. Future COBOL
-  projects will swap between using fixed and free format.
+  what I used to prefer using for COBOL programming. Future COBOL
+  projects will utilise free format
 - The `meta` folder contains project metadata files that are not used for
   running the app.
 
