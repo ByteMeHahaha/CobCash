@@ -4,12 +4,12 @@
 project-meta:
   project-name: CobCash
   date-started: 2026-01-25
-  last-updated: 2026-02-09
+  last-updated: 2026-05-07
   languages:
     - COBOL (GnuCOBOL)
   status: Stable
   license: MIT
-  version: 1.0.0
+  version: 1.1.0
 
 build:
   dev-environments:
@@ -29,5 +29,5 @@ team:
   contributors:
     - name: Ethan Kletschke
       role: Author and Owner
-      github-username: ethanKletschke
-      website: https://ethankletschke.netlify.app
+      github-username: ByteMeHahaha
+      website: https://ethankportfolio.netlify.app/

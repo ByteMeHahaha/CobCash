@@ -5,7 +5,7 @@
 A fixed-format COBOL app that imitates a transaction at a cashier till.
 
 - Author: Ethan Kletschke
-- Version: `1.0.0`
+- Version: `1.1.0`
 - Developed and Tested On: Windows 11
 - Targeted Platform: Windows 10 and above
 - License: MIT
@@ -26,7 +26,7 @@ A fixed-format COBOL app that imitates a transaction at a cashier till.
 ## About the App
 
 This program is a mockup of a cashier till application. You input the
-cardholder's name, their 5-digit card PIN, amount owed (to pay), and the 
+cardholder's name, their 5-digit card PIN, amount owed (to pay), and the
 amount paid via card. The program then validates the input values, displays
 a processing screen for two seconds, and displays a payment summary. The app
 then generates a receipt in the form of a text file (`Receipt.txt`).
@@ -35,10 +35,10 @@ then generates a receipt in the form of a text file (`Receipt.txt`).
 
 ### About This Project
 
-- All COBOL source code intentionally follows _**fixed format**_, as this is 
-  what I prefer and am used to using for COBOL programming. Future COBOL 
+- All COBOL source code intentionally follows _**fixed format**_, as this is
+  what I prefer and am used to using for COBOL programming. Future COBOL
   projects will swap between using fixed and free format.
-- The `meta` folder contains project metadata files that are not used for 
+- The `meta` folder contains project metadata files that are not used for
   running the app.
 
 ### Known Limitations and Bugs
@@ -51,30 +51,30 @@ then generates a receipt in the form of a text file (`Receipt.txt`).
   - There is a chance that user input can overflow into different fields if the
     entered number is longer than the target field.
   - It is recommended to use the arrow keys to navigate to different fields.
-  - Furthermore, if you press backspace in the numeric inputs, it'll remove 
-    the placeholder characters (i.e. `0` and `.`) and make input even more 
-    confusing. 
+  - Furthermore, if you press backspace in the numeric inputs, it'll remove
+    the placeholder characters (i.e. `0` and `.`) and make input even more
+    confusing.
       - To fix this, just use the arrow keys to navigate out of that
         field. This will refresh the formatting of that field.
 
 ## Features of This Project
 
-- Items, payment, processing, output, and error screens defined in the `SCREEN` 
+- Items, payment, processing, output, and error screens defined in the `SCREEN`
   section.
 - Build and linting scripts for Windows CMD
 - File handling with a sequential file
 - Comprehensive data structures in the `DATA` division
-- Generating a text file receipt with COBOL's Report Writer Control System 
+- Generating a text file receipt with COBOL's Report Writer Control System
   (RWCS)
 
 ## Running the App
 
-To run the app, unzip the `.zip` that will be provided in the latest 
-release of this repository, and run the `.exe`. 
+To run the app, unzip the `.zip` that will be provided in the latest
+release of this repository, and run the `.exe`.
 
 GnuCOBOL is not a fully static compiler like GCC. It generates native executables,
 but they depend on the GnuCOBOL runtime libraries (DLLs) to run — similar to how
-Python or .NET applications require their runtime to be present.  
+Python or .NET applications require their runtime to be present.
 Because of this, GnuCOBOL DLLs are required when running the application on
 Windows. The provided `.zip` should include all necessary DLLs. However, if the
 program starts and reports missing DLLs, **please** open a GitHub issue and
@@ -86,8 +86,8 @@ unless you already have a working GnuCOBOL + MinGW setup. Configuring the toolch
 and collecting all required runtime DLLs can be difficult and error-prone.
 
 For this reason, a pre-built GnuCOBOL distribution (such as
-[Arnold Trembley's amazing binaries](https://www.arnoldtrembley.com/GnuCOBOL.htm)) 
-was used to build the provided binaries, and the release ZIP includes the DLLs 
+[Arnold Trembley's amazing binaries](https://www.arnoldtrembley.com/GnuCOBOL.htm))
+was used to build the provided binaries, and the release ZIP includes the DLLs
 needed to run the program on Windows.
 
 If you do build from source and encounter missing DLL errors, please report them
