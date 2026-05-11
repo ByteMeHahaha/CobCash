@@ -67,10 +67,36 @@ then generates a receipt in the form of a text file (`Receipt.txt`).
 - Generating a text file receipt with COBOL's Report Writer Control System
   (RWCS)
 
-## Running the App
+## Running CobCash
+
+### Via the GitHub Release
 
 To run the app, unzip the `.zip` that will be provided in the latest
 release of this repository, and run the `.exe`.
+
+### Compiling from Source
+
+If you have `cobc` and GnuCOBOL's runtime on your system, you can
+clone the app and compile it from source.
+
+This is done by:
+
+1. Cloning the app with `git clone`
+2. Navigating into the cloned project folder
+3. Navigating into `scripts`
+4. Running `build.cmd`
+
+For Linux users, run the following in the project root folder:
+
+```bash
+cobc -I ./src -x ./src/**.cbl -o ./bin/CobCash  -w -q
+./bin/CobCash
+```
+
+**NOTE**: The app has NOT been tested on Linux. Proceed with caution and make
+a GitHub issue for me to fix whatever the problem is.
+
+### Notes
 
 GnuCOBOL is not a fully static compiler like GCC. It generates native executables,
 but they depend on the GnuCOBOL runtime libraries (DLLs) to run — similar to how
