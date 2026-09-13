@@ -6,4 +6,3 @@ scripts/
 .gitignore
 Dockerfile*
 README.md
-LICENSE

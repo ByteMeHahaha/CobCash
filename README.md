@@ -65,12 +65,12 @@ then generates a receipt in the form of a text file (`Receipt.txt`).
 
 - Items, payment, processing, output, and error screens defined in the `SCREEN`
   section.
-- Build and linting scripts for Windows CMD
+- Build and linting scripts for Windows CMD and Bash
 - File handling with a sequential file
 - Comprehensive data structures in the `DATA` division
 - Generating a text file receipt with COBOL's Report Writer Control System
   (RWCS)
-- Verified to work across Linux, Windows, and through Docker's CLI
+- Verified to work across Linux, Windows, and through a Docker image
 
 ## Running CobCash
 
@@ -113,13 +113,13 @@ To build the Docker image via the repository's `Dockerfile`, run the following
 commands in the root folder of the project:
 
 ```bash
-docker build -t cobcash .
+docker build -t cobcash:v1.1 .
 ```
 
 Then to run it:
 
 ```bash
-docker run --rm -it cobcash:latest
+docker run --rm -it cobcash:v1.1
 ```
 
 Note: Running the image directly through Docker Desktop's container UI will not

@@ -16,10 +16,10 @@ jobs:
           version: 3.2
 
       - name: Syntax check
-        run: cobc -I src -fsyntax-only -Wfatal-errors -Wall -Wextra -Wno-terminator src/*.cbl
+        run: cobc -I src/copy -fsyntax-only -Wfatal-errors -Wall -Wextra -Wno-terminator src/*.cbl
 
       - name: Compile (warnings)
-        run: cobc -Wfatal-errors -Wall -Wextra -Wno-terminator -I src -c src/*.cbl
+        run: cobc -Wfatal-errors -Wall -Wextra -Wno-terminator -I src/copy -c src/*.cbl
 
-      - name: Link executable  
-        run: cobc -x -I src src/*.cbl
+      - name: Link executable
+        run: cobc -x -I src/copy src/*.cbl

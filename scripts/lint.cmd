@@ -2,7 +2,7 @@
 @REM First run "set_env.cmd" from GnuCOBOL's root folder
 
 @REM Check the syntax of the source code files
-cobc -I ../src ^
+cobc -I ../src/copy ^
   -fsyntax-only ^
   ../src/*.cbl ^
   -Wall ^

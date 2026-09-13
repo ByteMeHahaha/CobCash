@@ -1,4 +1,6 @@
-cobc -I ../src \
+#!/usr/bin/env bash
+
+cobc -I ../src/copy \
   -fsyntax-only \
   ../src/*.cbl \
   -Wall \

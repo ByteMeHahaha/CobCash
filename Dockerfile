@@ -7,7 +7,7 @@ RUN apt-get update && \
 WORKDIR /src
 COPY ./src .
 
-RUN cobc -x main.cbl -I ./ -o CobCash
+RUN cobc -x main.cbl -I ./copy -o CobCash
 
 # -------------------------------
 
