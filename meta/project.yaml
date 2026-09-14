@@ -4,7 +4,7 @@
 project-meta:
   project-name: CobCash
   date-started: 2026-01-25
-  last-updated: 2026-09-13
+  last-updated: 2026-09-14
   languages:
     - COBOL (GnuCOBOL)
   status: Stable
@@ -24,7 +24,9 @@ build:
   compiler:
     compiler-name: cobc (GnuCOBOL)
     static-compiler: false
-    compiler-version: 3.2.0
+    compiler-version:
+      - 3.1.2 (WSL)
+      - 3.2.0 (Windows 11)
 
 team:
   author: Ethan Kletschke

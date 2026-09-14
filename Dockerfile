@@ -5,6 +5,7 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 WORKDIR /src
+
 COPY ./src .
 
 RUN cobc -x main.cbl -I ./copy -o CobCash
@@ -18,6 +19,7 @@ RUN apt-get update && \
   rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
+
 COPY --from=build /src/CobCash .
 
 CMD ["./CobCash"]

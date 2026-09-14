@@ -60,6 +60,8 @@ then generates a receipt in the form of a text file (`Receipt.txt`).
     confusing.
       - To fix this, just use the arrow keys to navigate out of that
         field. This will refresh the formatting of that field.
+- The receipt is not accessible on Docker without first mounting a volume to the
+  CobCash container (see [here](#through-a-docker-image)).
 
 ## Features of This Project
 
@@ -113,13 +115,17 @@ To build the Docker image via the repository's `Dockerfile`, run the following
 commands in the root folder of the project:
 
 ```bash
-docker build -t cobcash:v1.1 .
+# Create a volume to access the receipt
+docker volume create cobcash-data
+
+# Build the Dockerfile
+docker build -t cobcash:1.2 .
 ```
 
 Then to run it:
 
 ```bash
-docker run --rm -it cobcash:v1.1
+docker run --rm -it --mount source=cobcash-data,target=/app cobcash:1.2
 ```
 
 Note: Running the image directly through Docker Desktop's container UI will not
